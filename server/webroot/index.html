@@ -1,0 +1,38 @@
+<html lang="en">
+    <head>
+        <script src="js/WTML/WTML.js" type="text/javascript"></script>
+
+    </head>
+    <body>
+        <h1>WTML.js - A Javascript parser of the Web Template Markup Language</h1>
+
+        <h2>This .wtml code:</h2>
+        <code id="wtml"></code>
+        <h2>Translates into this html:</h2>
+        <code id="html"></code>
+
+    <script type="text/javascript">
+        var string = "html{\n" +
+                        "head{\n" +
+                        "   title('hello'); //a comment\n" +
+                        "}\n" +
+                        "body{\n" +
+                        "   h1('Hello World');\n" +
+                        " div#sample.example.demo[foo=\"bar\"][shoe=\"car\"]>span('baz');\n" +
+                        "/* comment example */ \n" +
+                        "/*\n" +
+                        "a[href=\"#commented_out\"];\n" +
+                        "*/\n" +
+                        "}\n" +
+                    "}\n", //bare example
+            translator = new WTMLTranslator(),
+            html = translator.translate(string)
+        ;
+
+        document.getElementById('wtml').innerText = string;
+        document.getElementById('html').innerText = html;
+
+        console.log(html);
+    </script>
+    </body>
+</html>

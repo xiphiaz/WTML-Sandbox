@@ -1,3 +1,4 @@
 vendor/*
 atlassian-ide-plugin.xml
 .idea/
+server/node_modules/
