@@ -3,6 +3,8 @@ var host = "local.wtml";
 var port = 8000;
 var express = require("express");
 
+var wtml = require("wtml");
+
 var app = express();
 app.use(app.router); //use both root and other routes below
 
