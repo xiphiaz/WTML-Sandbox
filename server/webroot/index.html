@@ -9,7 +9,7 @@
         <h2>This .wtml code:</h2>
         <code id="wtml"></code>
         <h2>Translates into this html:</h2>
-        <code id="html"></code>
+        <pre id="html"></pre>
 
     <script type="text/javascript">
         var string = "html{\n" +
@@ -19,6 +19,9 @@
                         "body{\n" +
                         "   h1(Hello World);\n" +
                         " div#sample.example.demo[foo=\"bar\"][shoe=\"car\"]>span(baz);\n" +
+                        "hr.horizontal-rule;\n"+
+                        "a#googlelink.link[foo=\"bar\"]{span.link(Google)};\n"+
+                        "br;\n" +
                         " <!-- html comment --> \n" +
                         "/* comment example */ \n" +
                         "/*\n" +
@@ -33,7 +36,7 @@
         document.getElementById('wtml').innerText = string;
         document.getElementById('html').innerText = html;
 
-        console.log(html);
+//        console.log(html);
     </script>
     </body>
 </html>
