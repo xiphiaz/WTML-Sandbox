@@ -18,7 +18,7 @@
                         "}\n" +
                         "body{\n" +
                         "   h1(Hello World);\n" +
-                        " div#sample.example.demo[foo=\"bar\"][shoe=\"car\"]>span(baz);\n" +
+                        " div#sample.example.demo[foo=\"bar\"][shoe=\"car\"]>ul.list>li({{listItem}});\n" +
                         "hr.horizontal-rule;\n"+
                         "a#googlelink.link[foo=\"bar\"]{span.link(Google)};\n"+
                         "br;\n" +
@@ -28,8 +28,9 @@
                         "a[href=\"#commented_out\"];\n" +
                         "*/\n" +
                         "}\n" +
-                    "}\n", //bare example
-            translator = new WTMLTranslator(),
+                    "}\n"; //bare example
+
+            var translator = new WTMLTranslator(),
             html = translator.translate(string)
         ;
 
